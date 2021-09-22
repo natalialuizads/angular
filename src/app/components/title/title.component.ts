@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
-  styleUrls: ['./title.component.scss']
+  styleUrls: ['./title.component.scss'],
 })
-export class TitleComponent implements OnInit {
+export class TitleComponent implements OnDestroy {
+  public title: string = 'Meu primeiro componente no angular!';
 
-  public title: string = 'Meu primeiro componente no angular!'
+  constructor() {}
 
-  constructor() {};
-
-  ngOnInit(): void {};
-
+  ngOnDestroy(): void {
+    console.log('Eu fui destruído, tchaaaau');
+  }
 }
