@@ -1,0 +1,34 @@
+<!--  
+  Interpolation 
+  A interpolação de texto permite que você incorpore valores dinâmicos em 
+  seus modelos HTML.
+ -->
+<p>{{ interpolation }}</p>
+<p>Quanto é 10 + 30 = {{10 + 30}}</p>
+<p>Natália tem mais de 26 anos? {{ idade > 26 }}</p>
+<img src="{{imagemUrl}}">
+
+<!-- 
+  Property Binding 
+  Ajuda a definir valores para propriedades de elementos ou diretivas HTML 
+-->
+<button [disabled]="disableButton">Botão</button>
+<img [src]="imagemUrl">
+
+<!-- 
+  Event Binding 
+  É a associação de eventos que permite você escutar e responder às ações 
+  do usuário, como pressionamentos de tecla, movimentos do mouse, cliques
+  e toques.
+-->
+<button (click)="onClick()">Clique aqui</button>
+
+<!-- 
+  Two-way binding
+  É a união do property-binding com event-binding. Use para ouvir eventos
+  e atualizar valores simultaneamente entre os componentes pai e filho.
+-->
+<input [(ngModel)]="nome" />
+<span>{{ nome }}</span>
+
+

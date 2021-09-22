@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <app-lifecycle exemplo="Estou mudando texto do componente"></app-lifecycle>
+   <app-data-binding></app-data-binding>
   `
 })
 export class AppComponent {}
