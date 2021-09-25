@@ -2,32 +2,51 @@
   Interpolation 
   A interpolação de texto permite que você incorpore valores dinâmicos em 
   seus modelos HTML.
+
+  https://angular.io/guide/interpolation
  -->
+<h2>Interpolation</h2>
 <p>{{ interpolation }}</p>
 <p>Quanto é 10 + 30 = {{10 + 30}}</p>
 <p>Natália tem mais de 26 anos? {{ idade > 26 }}</p>
 <img src="{{imagemUrl}}">
 
+<hr>
 <!-- 
   Property Binding 
   Ajuda a definir valores para propriedades de elementos ou diretivas HTML 
--->
-<button [disabled]="disableButton">Botão</button>
-<img [src]="imagemUrl">
 
+  https://angular.io/guide/property-binding
+-->
+<h2> Property Binding </h2>
+<button disabled="true">Botão 2</button>
+<button [disabled]="disableButton">Botão 1</button>
+<img [src]="imagemUrl" [title]="imagemTitle" [alt]="imagemTitle">
+
+<hr>
 <!-- 
   Event Binding 
   É a associação de eventos que permite você escutar e responder às ações 
   do usuário, como pressionamentos de tecla, movimentos do mouse, cliques
   e toques.
--->
-<button (click)="onClick()">Clique aqui</button>
 
+  https://angular.io/guide/event-binding
+-->
+<h2> Event Binding </h2>
+<button (click)="onClick('Deu booom')">Clique aqui</button>
+<div class="background" (mousemove)="onMouseMove($event)"></div>
+Posição X: {{ position.x }}
+Posição Y: {{ position.y }}
+
+<hr>
 <!-- 
   Two-way binding
   É a união do property-binding com event-binding. Use para ouvir eventos
   e atualizar valores simultaneamente entre os componentes pai e filho.
+
+  https://angular.io/api/forms/NgModel
 -->
+<h2> Two-way binding </h2>
 <input [(ngModel)]="nome" />
 <span>{{ nome }}</span>
 
