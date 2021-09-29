@@ -14,6 +14,8 @@ As diretivas são separadas de algumas formas, como:
   elementos do host aos quais estão anexados.
 -->
 
+<h2>NgIf</h2>
+
 <!-- NgIf - Condicionalmente cria ou descarta visualizações do modelo. -->
 <p *ngIf="conditionClick">
   O botão foi clicado!
@@ -30,11 +32,36 @@ As diretivas são separadas de algumas formas, como:
   <p>Texto está aparecendo por que condição false</p>
 </ng-template>
 
-
+<h2>NgFor</h2>
 
 <!-- NgFor - Repete um nó para cada item de uma lista.  -->
+<ul>
+  <li *ngFor="let item of list">
+    {{ item.nome }} - idade = {{ item.idade }}
+  </li>
+</ul>
+
+
+<ul>
+  <li *ngFor="let item of list; index as i;" (click)="onClickEventList(i)">
+    [{{i}}] - {{ item.nome }} - idade = {{ item.idade }}
+  </li>
+</ul>
+
+
+<button (click)="onClickAddList()">Add</button>
+
 
 <!-- NgSwitch - Um conjunto de diretivas que alternam entre visões alternativas. -->
+<input type="text" [(ngModel)]="nome">
+
+<div [ngSwitch]="nome">
+   <p *ngSwitchCase="'Natália'">Olá Natália</p>
+   <p *ngSwitchCase="'João'">Olá João</p>
+   <p *ngSwitchCase="'Apolo'">Olá Apolo</p>
+   <p *ngSwitchDefault>Usuário não encontrado :(</p>
+</div>
+
 
 <!-- 
   Diretivas de atributo 
