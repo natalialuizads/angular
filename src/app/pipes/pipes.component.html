@@ -1,0 +1,18 @@
+<input [(ngModel)]="tarefa" />
+<button (click)="salvar()">Salvar</button>
+
+<h1>UpperCase</h1>
+<ul>
+  <li *ngFor="let item of listaTarefa">{{item.tarefa | uppercase}}</li>
+</ul>
+
+<h1>LowerCase</h1>
+<ul>
+  <li *ngFor="let item of listaTarefa">{{item.tarefa | lowercase}}</li>
+</ul>
+
+<h1>Date</h1>
+<p>{{ data | date: 'ddMMyyyy' }}</p>
+<p>{{ data | date: 'dd/MM/yyyy' }}</p>
+<p>{{ data | date: 'short' }}</p>
+

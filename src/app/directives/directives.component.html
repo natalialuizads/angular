@@ -1,15 +1,16 @@
 <h2>Diretivas</h2>
-<!-- 
-As diretivas são classes que adicionam comportamento 
-adicional aos elementos em seus aplicativos Angular 
-Como as diretivas integradas do Angular, você pode gerenciar 
+<!--
+As diretivas são classes que adicionam comportamento
+adicional aos elementos em seus aplicativos Angular
+Como as diretivas integradas do Angular, você pode gerenciar
 formulários, listas, estilos e o que os usuários veem.
 
 As diretivas são separadas de algumas formas, como:
 -->
 
-<!-- 
-  Diretivas de estruturais 
+<!--
+  Diretivas de estruturais
+
   Eles moldam ou remodelam a estrutura do DOM, adicionando, removendo e manipulando os
   elementos do host aos quais estão anexados.
 -->
@@ -21,7 +22,7 @@ As diretivas são separadas de algumas formas, como:
   O botão foi clicado!
 </p>
 <p *ngIf="!conditionClick">
-  O botão não foi clicado! 
+  O botão não foi clicado!
 </p>
 
 <button (click)="onClick()">Clicar</button>
@@ -63,10 +64,10 @@ As diretivas são separadas de algumas formas, como:
 </div>
 
 
-<!-- 
-  Diretivas de atributo 
-  Que alteram a aparência ou comportamento de um elemento, 
-  componente ou outra diretiva. 
+<!--
+  Diretivas de atributo
+  Que alteram a aparência ou comportamento de um elemento,
+  componente ou outra diretiva.
 -->
 <h2>NgClass</h2>
 
@@ -88,9 +89,15 @@ As diretivas são separadas de algumas formas, como:
   <li *ngFor="let item of listaTarefa">{{item.tarefa}}</li>
 </ul>
 
-<!-- NgTemplate - Cria um atributo no HTML limpo, não é uma div. 
-     Faz verificação com ngIF antes do DOM ser carregado 
+<!--
+     NgTemplate - Cria um atributo no HTML limpo, não é uma div.
+     Faz verificação com ngIF antes do DOM ser carregado.
+     Angular define um modelo que não é renderizado por padrão.
 -->
 <ng-template [ngIf]="true" ngFor let-item [ngForOf]="listaTarefa">
   <p>{{item.tarefa}}</p>
 </ng-template>
+
+<!-- NgContent  -->
+<ng-content select="hr"></ng-content>
+<ng-content select="h1"></ng-content>
