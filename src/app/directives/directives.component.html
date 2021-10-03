@@ -68,11 +68,29 @@ As diretivas são separadas de algumas formas, como:
   Que alteram a aparência ou comportamento de um elemento, 
   componente ou outra diretiva. 
 -->
+<h2>NgClass</h2>
 
 <!-- NgClass - adiciona e remove um conjunto de classes CSS. -->
+<p [ngClass]="{'active': valor, 'disabled': !valor}">Estou aprendendo ngClass</p>
+
+<h2>NgStyle</h2>
 
 <!-- NgStyle - adiciona e remove um conjunto de estilos HTML.  -->
+<p [ngStyle]="{'height': heightPx, 'background-color': backgroundColor}">Estou aprendendo ngStyle</p>
+
+<h2> NgModel </h2>
 
 <!-- NgModel - adiciona vinculação de dados bidirecional a um elemento de formulário HTML -->
+<input [(ngModel)]="tarefa" />
+<button (click)="salvar()">Salvar</button>
 
+<ul>
+  <li *ngFor="let item of listaTarefa">{{item.tarefa}}</li>
+</ul>
 
+<!-- NgTemplate - Cria um atributo no HTML limpo, não é uma div. 
+     Faz verificação com ngIF antes do DOM ser carregado 
+-->
+<ng-template [ngIf]="true" ngFor let-item [ngForOf]="listaTarefa">
+  <p>{{item.tarefa}}</p>
+</ng-template>
