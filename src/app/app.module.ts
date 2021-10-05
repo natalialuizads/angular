@@ -8,6 +8,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ModulesModule } from './modules/modules.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PipesComponent } from './pipes/pipes.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ModulesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
