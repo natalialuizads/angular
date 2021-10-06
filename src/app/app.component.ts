@@ -2,6 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: ` <app-pipes><app-pipes> </app-pipes></app-pipes> `,
+  template: `
+  <app-input-output [contador]="addValue"></app-input-output>
+  <button (click)="add()">Adicionar</button>
+  `,
 })
-export class AppComponent {}
+export class AppComponent {
+
+  public addValue: number = 0;
+  constructor(){}
+
+  add(): void {
+    this.addValue++;
+  }
+}

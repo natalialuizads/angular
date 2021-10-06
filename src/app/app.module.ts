@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ModulesModule } from './modules/modules.module';
+import { InputOutputComponent } from './input-output/input-output.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ModulesModule } from './modules/modules.module';
     DataBindingComponent,
     DirectivesComponent,
     PipesComponent,
+    InputOutputComponent,
   ],
   imports: [
     BrowserModule,
