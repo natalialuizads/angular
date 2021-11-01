@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ModulesModule } from './modules/modules.module';
-import { InputOutputComponent } from './input-output/input-output.component';
+import { BankingComponent } from './unit-tests/banking/banking.component';
+import { InputOutputModule } from './input-output/input-output.module';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { InputOutputComponent } from './input-output/input-output.component';
     DataBindingComponent,
     DirectivesComponent,
     PipesComponent,
-    InputOutputComponent,
+    BankingComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ModulesModule,
+    InputOutputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

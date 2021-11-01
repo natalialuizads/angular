@@ -1,0 +1,23 @@
+<p>
+  <strong>Olá, Natália Luiza</strong>
+  <br />
+  Ag: 9999, CO: 99999-9
+</p>
+
+<p>
+  Poupança: R$ <strong id="get-poupanca">{{ getPoupanca }}</strong>
+  <br />
+
+  <input id="input-sacar" type="text" #sacar />
+  <button id="sacar" (click)="setSacar(sacar.value)">Sacar</button>
+</p>
+
+<p>
+  Carteira: R$ <strong id="get-carteira">{{ getCarteira }}</strong>
+  <br />
+
+  <input id="input-depositar" type="text" #depositar />
+  <button id="depositar" (click)="setDepositar(depositar.value)">
+    Depositar
+  </button>
+</p>

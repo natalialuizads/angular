@@ -6,12 +6,20 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./input-output.component.scss']
 })
 export class InputOutputComponent implements OnInit {
+  public addValue: number = 0;
 
-  @Input() public contador: number = 0;
-  
+  public getDados: { nome: string, idade: number } | undefined;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  public add() {
+    this.addValue += 1;
+  }
+
+  public setDados(event: { nome: string, idade: number }) {
+    this.getDados = event;
   }
 
 }
