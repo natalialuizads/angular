@@ -1,0 +1,72 @@
+<form #form="ngForm">
+  <!-- Tipo texto -->
+  <label for="nome">Nome</label>
+  <input type="text" name="nome" id="nome" ngModel placeholder="Informe o nome">
+  <br>
+  <br>
+  <!-- Tipo radio -->
+  <label>
+    Masculino:
+    <input type="radio" name="sexo" ngModel value="masculino" required>
+  </label>
+  <label>
+    Feminino:
+    <input type="radio" name="sexo" ngModel value="feminino">
+  </label>
+  <br>
+  <br>
+  <!-- tipo checkbox -->
+  <label>
+    Angular:
+    <input type="checkbox" name="angular" ngModel>
+  </label>
+  <label>
+    Vue:
+    <input type="checkbox" name="vue" ngModel>
+  </label>
+  <label>
+    React:
+    <input type="checkbox" name="react" ngModel>
+  </label>
+  <br>
+  <br>
+  <!-- tipo select -->
+  <h2>Exemplo 1 - Selected</h2>
+  <select name="comidas" ngModel>
+    <option value="">Selecione um alimento</option>
+    <option value="batata">Batata Frita</option>
+    <option value="chocolate">Chocolate</option>
+    <option value="bolo">Bolo</option>
+  </select>
+  <br>
+  <br>
+  <h2>Exemplo 2 - Selected</h2>
+  <!-- Pode usar value para pegar o valor, ngValue para pegar objeto -->
+  <select name="cidade" ngModel>
+    <option value="">Selecione uma cidade</option>
+    <option *ngFor="let item of listCidades" [ngValue]="item">
+      {{item.cidade}} - {{item.estado}}
+    </option>
+  </select>
+  <br>
+  <br>
+
+</form>
+
+{{ form.value | json }}
+
+<h3>Validações de erro e envio</h3>
+<!-- Valid, dirty e touched -->
+<form #formValidation="ngForm" (ngSubmit)="submitForm(formValidation)">
+  <label for="usuario">usuario</label>
+  <input type="text" name="usuario" id="usuario" #usuario="ngModel" [ngModel]="usuario.value" placeholder="Informe o usuario" required>
+  <span *ngIf="usuario.invalid && (usuario.dirty && usuario.touched)">
+    Informe um usuário
+  </span>
+  <button [disabled]="formValidation.invalid">Enviar</button>
+</form>
+
+<p>O formulario possui algum valor: {{ usuario.dirty }}</p>
+<p>O input de usuario é valido: {{ usuario.valid }}</p>
+<p>O input foi clicado: {{ usuario.touched }}</p>
+<p>Formulario todo é valido: {{ formValidation.valid }}</p>

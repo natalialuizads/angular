@@ -11,6 +11,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ModulesModule } from './modules/modules.module';
 import { BankingComponent } from './unit-tests/banking/banking.component';
 import { InputOutputModule } from './input-output/input-output.module';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { InputOutputModule } from './input-output/input-output.module';
     DirectivesComponent,
     PipesComponent,
     BankingComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
