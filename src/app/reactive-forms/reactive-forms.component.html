@@ -1,0 +1,66 @@
+<!-- É necessário utilizar formGroup no formulario e formControlName nos inputs -->
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+  <label for="nome">
+    Nome:
+    <input type="text" name="nome" id="nome" formControlName="firstName" [class.erro-formulario]="
+      cadastroForm.get('firstName')?.errors &&
+      ( cadastroForm.get('firstName')?.touched ||
+        cadastroForm.get('firstName')?.dirty
+      )">
+    <span *ngIf="cadastroForm.get('firstName')?.errors &&
+      ( cadastroForm.get('firstName')?.touched ||
+        cadastroForm.get('firstName')?.dirty
+      )" class="error">
+      É necessário informar o nome.
+    </span>
+  </label>
+  <br>
+  <br>
+  <label for="sobrenome">
+    Sobrenome:
+    <input
+      type="text"
+      name="sobrenome"
+      id="sobrenome"
+      formControlName="lastName"
+    >
+  </label>
+  <span *ngIf="cadastroForm.get('lastName')?.errors &&
+      ( cadastroForm.get('lastName')?.touched ||
+        cadastroForm.get('lastName')?.dirty
+      )" class="error">
+      Favor deve ter no minimo de
+      {{ cadastroForm.get('lastName')?.errors?.minLength.requiredLength }}
+      e você já digitou
+      {{ cadastroForm.get('lastName')?.errors?.minLength.actualLength }}
+    </span>
+  <br>
+  <br>
+  <label for="email">
+    email:
+    <input type="email" name="email" id="email" formControlName="email">
+  </label>
+  <br>
+  <br>
+  <button [disabled]="cadastroForm.invalid">Enviar</button>
+</form>
+
+<!-- Pegando o valor de input do formulário. -->
+<p>Pegando valor do input: {{ cadastroForm.get('firstName')?.value }}</p>
+
+<!-- Quando retorna null quer dizer que é valido formulario -->
+<p>Nome é obrigatorio: {{ cadastroForm.get('firstName')?.errors | json }}</p>
+
+<!-- Criando validações para quando usuário clicar no input e não informar valor -->
+<p>Validar pessoa clicou no input:
+  Touched: {{ cadastroForm.get('firstName')?.touched | json }}
+  Dirty: {{ cadastroForm.get('firstName')?.dirty | json }}
+</p>
+
+<p>
+  Outros Validators:
+  <br>
+  maxLength e minLength: {{ cadastroForm.get('lastName')?.errors | json}}
+  <br>
+  email: {{ cadastroForm.get('email')?.errors | json}}
+</p>
