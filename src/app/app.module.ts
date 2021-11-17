@@ -13,6 +13,8 @@ import { BankingComponent } from './unit-tests/banking/banking.component';
 import { InputOutputModule } from './input-output/input-output.module';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { FoodListComponent } from './services/food-list/food-list.component';
+import { FoodAddComponent } from './services/food-list/food-add/food-add.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     BankingComponent,
     FormsComponent,
     ReactiveFormsComponent,
+    FoodListComponent,
+    FoodAddComponent,
   ],
   imports: [
     BrowserModule,

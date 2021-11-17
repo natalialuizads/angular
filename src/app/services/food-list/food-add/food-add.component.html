@@ -1,0 +1,11 @@
+<form #form="ngForm" (ngSubmit)="addFood(form)">
+  <input
+   type="text"
+   id="food"
+   name="food"
+   placeholder="Informe nome lanche"
+   #foodItem="ngModel"
+   [ngModel]="food"
+   >
+   <button>Adicionar</button>
+</form>

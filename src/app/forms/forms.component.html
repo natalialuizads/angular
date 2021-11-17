@@ -59,7 +59,15 @@
 <!-- Valid, dirty e touched -->
 <form #formValidation="ngForm" (ngSubmit)="submitForm(formValidation)">
   <label for="usuario">usuario</label>
-  <input type="text" name="usuario" id="usuario" #usuario="ngModel" [ngModel]="usuario.value" placeholder="Informe o usuario" required>
+  <input
+    type="text"
+    name="usuario"
+    id="usuario"
+    #usuario="ngModel"
+    [ngModel]="usuario.value"
+    placeholder="Informe o usuario"
+    required
+  >
   <span *ngIf="usuario.invalid && (usuario.dirty && usuario.touched)">
     Informe um usuário
   </span>
