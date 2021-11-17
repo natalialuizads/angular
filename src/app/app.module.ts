@@ -11,8 +11,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ModulesModule } from './modules/modules.module';
 import { BankingComponent } from './unit-tests/banking/banking.component';
 import { InputOutputModule } from './input-output/input-output.module';
-import { FormsComponent } from './forms/forms.component';
-import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { TemplateFormComponent } from './form/template/template-form.component';
+import { ReactiveFormsComponent } from './form/reactive-forms/reactive-forms.component';
 import { FoodListComponent } from './services/food-list/food-list.component';
 import { FoodAddComponent } from './services/food-list/food-add/food-add.component';
 
@@ -25,7 +25,7 @@ import { FoodAddComponent } from './services/food-list/food-add/food-add.compone
     DirectivesComponent,
     PipesComponent,
     BankingComponent,
-    FormsComponent,
+    TemplateFormComponent,
     ReactiveFormsComponent,
     FoodListComponent,
     FoodAddComponent,

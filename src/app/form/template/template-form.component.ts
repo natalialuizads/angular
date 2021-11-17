@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-forms',
-  templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.scss'],
+  selector: 'app-template-form',
+  templateUrl: './template-form.component.html',
+  styleUrls: ['./template-form.component.scss'],
 })
-export class FormsComponent implements OnInit {
+export class TemplateFormComponent implements OnInit {
   public listCidades: Array<{ cidade: string; estado: string }> = [
     { cidade: 'São Paulo', estado: 'SP' },
     { cidade: 'Rio de Janeiro', estado: 'RJ' },
