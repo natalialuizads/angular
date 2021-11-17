@@ -15,6 +15,8 @@ import { TemplateFormComponent } from './form/template-form/template-form.compon
 import { ReactiveFormsComponent } from './form/reactive-forms/reactive-forms.component';
 import { FoodListComponent } from './services/food-list/food-list.component';
 import { FoodAddComponent } from './services/food-list/food-add/food-add.component';
+import { CrudComponent } from './http/crud/crud.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { FoodAddComponent } from './services/food-list/food-add/food-add.compone
     ReactiveFormsComponent,
     FoodListComponent,
     FoodAddComponent,
+    CrudComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { FoodAddComponent } from './services/food-list/food-add/food-add.compone
     ModulesModule,
     InputOutputModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <input
+    type="text"
+    name="nome"
+    id="nome"
+    formControlName="nome"
+    placeholder="nome"
+  >
+  <input
+   type="email"
+   name="email"
+   id="email"
+   formControlName="email"
+   placeholder="email"
+   >
+  <button>Enviar</button>
+</form>
+
+<h2>Listagem de usuários</h2>
+<ul>
+  <li *ngFor="let user of userList">
+    <p>Usuario: {{ user.nome }}</p>
+    <p>Email: {{ user.email }}</p>
+    <button (click)="getUser(user.id)">Editar</button>
+    <button (click)="removeUser(user.id)">Deletar</button>
+  </li>
+</ul>
