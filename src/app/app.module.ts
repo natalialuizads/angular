@@ -11,7 +11,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ModulesModule } from './modules/modules.module';
 import { BankingComponent } from './unit-tests/banking/banking.component';
 import { InputOutputModule } from './input-output/input-output.module';
-import { TemplateFormComponent } from './form/template/template-form.component';
+import { TemplateFormComponent } from './form/template-form/template-form.component';
 import { ReactiveFormsComponent } from './form/reactive-forms/reactive-forms.component';
 import { FoodListComponent } from './services/food-list/food-list.component';
 import { FoodAddComponent } from './services/food-list/food-add/food-add.component';
