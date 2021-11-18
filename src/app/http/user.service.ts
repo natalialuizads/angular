@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User, UserList } from './user.interface';
@@ -13,8 +13,15 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
+  // Exemplo http custom headers
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+
   getListUsers(): Observable<UserList> {
-    return this.http.get<UserList>(this.apiUrl).pipe(
+    return this.http.get<UserList>(this.apiUrl, this.httpOptions).pipe(
       (res) => res,
       (error) => error
     );
