@@ -2,47 +2,46 @@
 <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
   <label for="nome">
     Nome:
-    <input type="text" name="nome" id="nome" formControlName="firstName" [class.erro-formulario]="
-      cadastroForm.get('firstName')?.errors &&
-      ( cadastroForm.get('firstName')?.touched ||
-        cadastroForm.get('firstName')?.dirty
-      )">
-    <span *ngIf="cadastroForm.get('firstName')?.errors &&
+  </label>
+  <input type="text" name="nome" id="nome" formControlName="firstName" aria-labelledby="nome" aria-required="true">
+  <span aria-label="É necessário informar o nome" *ngIf="cadastroForm.get('firstName')?.errors &&
       ( cadastroForm.get('firstName')?.touched ||
         cadastroForm.get('firstName')?.dirty
       )" class="error">
-      É necessário informar o nome.
-    </span>
-  </label>
+    É necessário informar o nome.
+  </span>
   <br>
   <br>
-  <label for="sobrenome">
-    Sobrenome:
-    <input
-      type="text"
-      name="sobrenome"
-      id="sobrenome"
-      formControlName="lastName"
-    >
-  </label>
-  <span *ngIf="cadastroForm.get('lastName')?.errors &&
+  <label for="sobrenome">Sobrenome:</label>
+  <input type="text" name="sobrenome" id="sobrenome" formControlName="lastName" aria-labelledby="sobrenome" aria-required="true">
+
+  <span aria-label="Favor deve ter ter no minimo 5 digitos" *ngIf="cadastroForm.get('lastName')?.errors &&
       ( cadastroForm.get('lastName')?.touched ||
         cadastroForm.get('lastName')?.dirty
       )" class="error">
-      Favor deve ter no minimo de
-      {{ cadastroForm.get('lastName')?.errors?.minLength.requiredLength }}
-      e você já digitou
-      {{ cadastroForm.get('lastName')?.errors?.minLength.actualLength }}
-    </span>
+    Favor deve ter no minimo de
+    {{ cadastroForm.get('lastName')?.errors?.minLength.requiredLength }}
+    e você já digitou
+    {{ cadastroForm.get('lastName')?.errors?.minLength.actualLength }}
+  </span>
   <br>
   <br>
   <label for="email">
     email:
-    <input type="email" name="email" id="email" formControlName="email">
   </label>
+  <input type="email" name="email" id="email" formControlName="email" aria-labelledby="email" aria-required="true">
+
+  <span aria-label="  Informe um e-mail valido" *ngIf="cadastroForm.get('email')?.errors &&
+      ( cadastroForm.get('email')?.touched ||
+        cadastroForm.get('email')?.dirty
+      )" class="error">
+    Informe um e-mail valido
+  </span>
   <br>
   <br>
-  <button [disabled]="cadastroForm.invalid">Enviar</button>
+  <button [disabled]="cadastroForm.invalid" aria-disabled="cadastroForm.invalid">
+    Enviar
+  </button>
 </form>
 
 <!-- Pegando o valor de input do formulário. -->
