@@ -17,6 +17,8 @@ import { FoodListComponent } from './services/food-list/food-list.component';
 import { FoodAddComponent } from './services/food-list/food-add/food-add.component';
 import { CrudComponent } from './http/crud/crud.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { HomeModule } from './routes/home.module';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputOutputModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot([]),
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

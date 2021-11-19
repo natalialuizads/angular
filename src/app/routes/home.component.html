@@ -1,0 +1,29 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="sobre"
+        routerLinkActive="active"
+      >
+        sobre
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="['/404']"
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true}"
+      >
+        error
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="['/perfil', 200]"
+        [routerLinkActive]="['active']"
+      >
+        perfil
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
