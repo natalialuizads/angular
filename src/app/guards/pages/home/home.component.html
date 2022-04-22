@@ -1,0 +1,9 @@
+<h1>Home</h1>
+
+<a [routerLink]="['/']" >Sair</a>
+
+<a [routerLink]="['../antigo-contato']" >Antigo Contato</a>
+
+<a [routerLink]="['../contato']" [queryParams]="{ user: 'admin', password: '1234'}" >Contato</a>
+
+<a [routerLink]="['../contato/suporte']" [queryParams]="{ user: 'admin', password: '1234'}" >Suporte</a>

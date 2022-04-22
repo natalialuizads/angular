@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
-import { SobreComponent } from './pages/sobre/sobre.component';
 const routes: Routes = [
   // Rota inicial, utilizamos o patchFull para falar que queremos rota toda.
   { path: '', component: HomeComponent, pathMatch: 'full' },

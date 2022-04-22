@@ -19,6 +19,7 @@ import { CrudComponent } from './http/crud/crud.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { HomeModule } from './routes/home.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -42,8 +43,9 @@ import { HomeModule } from './routes/home.module';
     InputOutputModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot([]),
-    HomeModule,
+    AppRoutingModule,
+    RouterModule,
+    // HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

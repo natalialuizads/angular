@@ -9,7 +9,6 @@ import { ListInvestimentsService } from '../../services/list-investiments.servic
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
   public investments!: Array<Investiments>;
