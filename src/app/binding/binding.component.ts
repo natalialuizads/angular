@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-interface Position { 
+interface Position {
   x: number,
   y: number,
 }
 
 @Component({
-  selector: 'app-data-binding',
-  templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.scss'],
+  selector: 'app-binding',
+  templateUrl: './binding.component.html',
+  styleUrls: ['./binding.component.scss'],
 })
-export class DataBindingComponent implements OnInit {
+export class BindingComponent implements OnInit {
   public interpolation: string = 'Estou aprendendo angular :)';
 
   public disableButton: boolean = true;
@@ -35,11 +35,15 @@ export class DataBindingComponent implements OnInit {
    * GlobalEventHandlersEventMap dentro do arquivo
    * lib.dom.d.ts
    */
-  public onClick(texto: string): void { 
+  public onClick(texto: string): void {
    alert(texto)
   }
 
   public onMouseMove(event: MouseEvent): void {
    this.position = { x: event.offsetX, y: event.offsetY };
+  }
+
+  public ligarTelefone(numero: number): void {
+    alert(`Numero de telefone ${numero}`)
   }
 }

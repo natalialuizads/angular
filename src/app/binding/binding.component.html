@@ -1,6 +1,6 @@
-<!--  
-  Interpolation 
-  A interpolação de texto permite que você incorpore valores dinâmicos em 
+<!--
+  Interpolation
+  A interpolação de texto permite que você incorpore valores dinâmicos em
   seus modelos HTML.
 
   https://angular.io/guide/interpolation
@@ -12,9 +12,9 @@
 <img src="{{imagemUrl}}">
 
 <hr>
-<!-- 
-  Property Binding 
-  Ajuda a definir valores para propriedades de elementos ou diretivas HTML 
+<!--
+  Property Binding
+  Ajuda a definir valores para propriedades de elementos ou diretivas HTML
 
   https://angular.io/guide/property-binding
 -->
@@ -24,9 +24,9 @@
 <img [src]="imagemUrl" [title]="imagemTitle" [alt]="imagemTitle">
 
 <hr>
-<!-- 
-  Event Binding 
-  É a associação de eventos que permite você escutar e responder às ações 
+<!--
+  Event Binding
+  É a associação de eventos que permite você escutar e responder às ações
   do usuário, como pressionamentos de tecla, movimentos do mouse, cliques
   e toques.
 
@@ -39,7 +39,7 @@ Posição X: {{ position.x }}
 Posição Y: {{ position.y }}
 
 <hr>
-<!-- 
+<!--
   Two-way binding
   É a união do property-binding com event-binding. Use para ouvir eventos
   e atualizar valores simultaneamente entre os componentes pai e filho.
@@ -51,3 +51,28 @@ Posição Y: {{ position.y }}
 <span>{{ nome }}</span>
 
 
+
+<!--
+  Template variables
+  As template variables ajudam você a usar dados de uma parte de um template em
+  outra parte do template. Use variáveis ​​de template para executar tarefas como
+  responder à entrada do usuário ou ajustar os formulários do seu aplicativo.
+
+  No template, você usa o caractere hash (#) para declarar uma variável de
+  template.
+  A variável de template a seguir, #telefone, declara uma telefone variável
+  em um <input>elemento.
+ -->
+ <h2>Template variables</h2>
+
+ <input #telefone placeholder="Telefone numero" type="number">
+
+ <button type="button" (click)="ligarTelefone(+telefone.value)">Ligar</button>
+
+ <div *ngIf="telefone.value; else mensagem">
+  {{ telefone.value}}
+ </div>
+
+ <ng-template #mensagem>
+    <p>Numero não foi informado.</p>
+ </ng-template>

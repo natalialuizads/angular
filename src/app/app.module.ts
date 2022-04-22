@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './components/title/title.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
+import { BindingComponent } from './binding/binding.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
@@ -26,7 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     TitleComponent,
     LifecycleComponent,
-    DataBindingComponent,
+    BindingComponent,
     DirectivesComponent,
     PipesComponent,
     BankingComponent,
