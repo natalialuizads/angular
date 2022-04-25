@@ -3,8 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'guards',
     loadChildren: () => import('./guards/guards.module').then((m) => m.GuardsModule)
+  }, {
+    path: 'resolvers',
+    loadChildren: () => import('./resolvers/resolvers.module').then((m) => m.ResolversModule)
   }
 ];
 

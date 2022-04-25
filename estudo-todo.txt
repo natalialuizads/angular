@@ -1,0 +1,6 @@
+- Pipe Async
+- Custom Piper - Impuro / Puro
+- Custom Directive, @HostLintener, @HostBinding
+- Dependency Injection & Zones
+- Gerando Imagem Docker com Build
+- Acessar DOM - @ViewChildren, @ViewChild, Element Ref
